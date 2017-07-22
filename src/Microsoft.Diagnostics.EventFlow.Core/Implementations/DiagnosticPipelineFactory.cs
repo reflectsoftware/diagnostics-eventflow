@@ -323,14 +323,14 @@ namespace Microsoft.Diagnostics.EventFlow
             inputFactories["Microsoft.Extensions.Logging"] = "Microsoft.Diagnostics.EventFlow.Inputs.LoggerInputFactory, Microsoft.Diagnostics.EventFlow.Inputs.MicrosoftLogging, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
             inputFactories["ETW"] = "Microsoft.Diagnostics.EventFlow.Inputs.EtwInputFactory, Microsoft.Diagnostics.EventFlow.Inputs.Etw, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
             inputFactories["ApplicationInsights"] = "Microsoft.Diagnostics.EventFlow.Inputs.ApplicationInsightsInputFactory, Microsoft.Diagnostics.EventFlow.Inputs.ApplicationInsights, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
-            outputFactories["ReflectInsight"] = "Microsoft.Diagnostics.EventFlow.Outputs.ReflectInsightOutputFactory, Microsoft.Diagnostics.EventFlow.Outputs.ReflectInsight, Culture=neutral, PublicKeyToken=4a3c404446dbbccd";
-
+            
             outputFactories = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
             outputFactories["ApplicationInsights"] = "Microsoft.Diagnostics.EventFlow.Outputs.ApplicationInsightsOutputFactory, Microsoft.Diagnostics.EventFlow.Outputs.ApplicationInsights, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
             outputFactories["StdOutput"] = "Microsoft.Diagnostics.EventFlow.Outputs.StdOutputFactory, Microsoft.Diagnostics.EventFlow.Outputs.StdOutput, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
             outputFactories["EventHub"] = "Microsoft.Diagnostics.EventFlow.Outputs.EventHubOutputFactory, Microsoft.Diagnostics.EventFlow.Outputs.EventHub, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
             outputFactories["ElasticSearch"] = "Microsoft.Diagnostics.EventFlow.Outputs.ElasticSearchOutputFactory, Microsoft.Diagnostics.EventFlow.Outputs.ElasticSearch, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
             outputFactories["OmsOutput"] = "Microsoft.Diagnostics.EventFlow.Outputs.OmsOutputFactory, Microsoft.Diagnostics.EventFlow.Outputs.Oms, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
+            outputFactories["ReflectInsight"] = "Microsoft.Diagnostics.EventFlow.Outputs.ReflectInsightOutputFactory, Microsoft.Diagnostics.EventFlow.Outputs.ReflectInsight, Culture=neutral, PublicKeyToken=4a3c404446dbbccd";
 
             filterFactories = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
             filterFactories["metadata"] = "Microsoft.Diagnostics.EventFlow.Filters.EventMetadataFilterFactory, Microsoft.Diagnostics.EventFlow.Core, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
