@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Diagnostics.EventFlow.Metadata;
 using Serilog.Events;
 using Validation;
 using Serilog.Core;
@@ -83,6 +84,14 @@ namespace Microsoft.Diagnostics.EventFlow.Inputs
             // `Message_1` and so-on.
             if (logEvent.Exception != null)
             {
+
+                if (logEvent.Level >= LogEventLevel.Error) 
+                {
+                    EventMetadata eventMetadata = new EventMetadata(ExceptionData.ExceptionMetadataKind);
+                    eventMetadata.Properties.Add(ExceptionData.ExceptionPropertyMoniker, "Exception");
+                    eventData.SetMetadata(eventMetadata);
+                }
+                
                 eventData.AddPayloadProperty("Exception", logEvent.Exception, healthReporter, nameof(SerilogInput));
             }
 
