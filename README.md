@@ -641,6 +641,7 @@ Supported configuration settings are:
 | `workspaceKey` | string (base-64) | Yes | Specifies the workspace authentication key. |
 | `logTypeName` | string | No | Specifies the log entry type created by the output. Default value for this setting is "Event", which results in "Event_CL" entries being created in OMS (the "_CL" suffix is appended automatically by OMS ingestion service). |
 
+
 #### ReflectInsight
 
 *Nuget package:* [**Microsoft.Diagnostics.EventFlow.Outputs.ReflectInsight**](https://www.nuget.org/packages/Microsoft.Diagnostics.EventFlow.Outputs.ReflectInsight/)
@@ -688,7 +689,6 @@ namespace EventFlowReflectInsightConsole
     }
 }
 ```
-
 
 ### Filters
 As data comes through the EventFlow pipeline, the application can add extra processing or tagging to them. These optional operations are accomplished with filters. Filters can transform, drop, or tag data with extra metadata, with rules based on custom expressions.
@@ -1188,9 +1188,10 @@ The following table lists platform support for standard inputs and outputs.
 | [Serilog](#serilog) | Yes | Yes | Yes |
 | [Microsoft.Extensions.Logging](#microsoftextensionslogging) | Yes | Yes | Yes |
 | [ETW (Event Tracing for Windows)](#etw-event-tracing-for-windows) | Yes | Yes | No |
+| [Application Insights input](#application-insights-input) | Yes | Yes | Yes |
 | *Outputs* |
 | [StdOutput (console output)](#stdoutput) | Yes | Yes | Yes |
-| [Application Insights](#application-insights) | Yes | Yes | No |
+| [Application Insights](#application-insights) | Yes | Yes | Yes |
 | [Azure EventHub](#event-hub) | Yes | Yes | No |
 | [Elasticsearch](#elasticsearch) | Yes | Yes | Yes |
 | [OMS (Operations Management Suite)](#oms-operations-management-suite) | Yes | Yes | Yes |
